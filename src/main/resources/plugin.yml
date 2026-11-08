@@ -1,0 +1,6 @@
+name: NoEndermanGrief
+version: '${pluginVersion}'
+main: dev.moonyxk.noendermangrief.NoEndermanGriefPlugin
+api-version: '26.3'
+description: Prevents endermen from picking up blocks.
+author: moonyxk

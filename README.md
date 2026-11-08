@@ -1,26 +1,34 @@
-<div align="center">
-  
-![minecraft datapack title...](https://assets.jodek.dev/title/no_enderman_grief.png)
+# No Enderman Grief
 
-[![jodeks discord - discord badge - pixel badge - pixel discord badge - jodeks datapacks - datapacks discord](https://assets.jodek.dev/badge/discord.png)](https://discord.gg/z2n3qTzQY6)&nbsp;&nbsp;
-[![datapacks jodek youtube](https://assets.jodek.dev/badge/youtube.png)](https://www.youtube.com/@jodek)&nbsp;&nbsp;
-[![armor stand arms minecraft datapack codeberg issues](https://assets.jodek.dev/badge/codeberg_issues.png)](https://codeberg.org/jodeks-datapacks/no-enderman-grief/issues)&nbsp;&nbsp;
-[![jodeks datapacks kofi - jodek kofi - minecraft datapack kofi donation](https://assets.jodek.dev/badge/kofi.png)](https://ko-fi.com/jodek)
+Ein Paper-Plugin für Minecraft Java Edition 26.3. Es verhindert, dass
+Endermen Blöcke aufheben. Das Ablegen bereits getragener Blöcke bleibt erlaubt.
 
-# Stops enderman from pickung up blocks
+![Enderman hebt keinen Block auf](https://cdn.modrinth.com/data/cached_images/d71ea7955e7bacbd8307c87c4bc9101a2d903c75.png)
 
-## Enabled
+## Voraussetzungen
 
-![Enderman do not pick up blocks](https://cdn.modrinth.com/data/cached_images/d71ea7955e7bacbd8307c87c4bc9101a2d903c75.png)
+- Java 25 oder neuer
+- Paper 26.3
 
-## Disabled
+## Bauen
 
-![Enderman picking up blocks](https://cdn.modrinth.com/data/cached_images/21de0d2b5968ff59ea1768e49b8f894888ac5f5c.png)
+Unter Windows:
 
-&nbsp;
+```powershell
+.\gradlew.bat build
+```
 
-[![jodek datapack suggestions](https://assets.jodek.dev/badge/new_datapack_suggestion.png)](https://codeberg.org/jodeks-datapacks/.profile/issues/new?template=.forgejo%2fISSUE_TEMPLATE%2fdatapack_request.yaml)
+Unter Linux/macOS:
 
-&nbsp;
+```sh
+./gradlew build
+```
 
-</div>
+Das Plugin-JAR liegt anschließend in `build/libs/`. Kopiere es in den
+`plugins/`-Ordner deines Paper-Servers und starte den Server neu.
+
+## Verhalten
+
+Das Plugin bricht nur Änderungen ab, bei denen ein Enderman einen vorhandenen
+Block in Luft verwandeln würde. Andere Entitäten und das Platzieren eines
+getragenen Blocks bleiben unverändert.
